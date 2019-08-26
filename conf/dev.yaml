@@ -1,0 +1,43 @@
+# yaml
+# dev environment config
+db:
+  type: mysql
+  user: go
+  password: go
+  host: 1.1.1.1:3306
+  sid: go
+  tableprefix: go_
+  maxidleconn: 10
+  maxopenconn: 100
+  dbdebug: true
+
+server:
+  runmode: debug
+  httpprot: 8089
+  readtimeout: 60
+  wirtetimeout: 60
+
+app:
+  runtimebasepath: C:\\GOLib\\src\\go-procvisual\\runtime
+  imagesavepath: upload/images
+  imagemaxsize: 5
+  imageallowexts:
+    - .jpg
+    - .jpeg
+    - .png
+  imageallowextstype:
+    - image/png
+    - image/jpg
+    - image/jpeg
+  imageurl: /upload/image/
+  filepreurl: http://127.0.0.1:8089
+
+#
+#jwt:
+#  jwtsecret: $sfsadf$sdf8s
+#  jwteffectivetime: 60
+#
+logs:
+  logsrootpath: C:\\GOLib\\src\\go-procvisual\\logs
+  logslevel: debug
+  logsfilename: info.log
